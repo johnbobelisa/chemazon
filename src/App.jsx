@@ -1,16 +1,26 @@
-// App.jsx
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './pages/page-home';
-import Login from './pages/page-login';
+import React from "react";
+import { useAuth } from "react-oidc-context";
+import Navbar from "./components/Navbar/Navbar";
+import Sidebar from "./components/Sidebar/Sidebar";
 
 function App() {
+  const auth = useAuth();
+
+  if (auth.isLoading) {
+    return <div>Loading...</div>;
+  }
+
+  if (auth.error) {
+    return <div>Encountered error: {auth.error.message}</div>;
+  }
+
+  // Always show Navbar + Sidebar; conditionally show token info only if authenticated.
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/login" element={<Login />} />
-      </Routes>
-    </Router>
+    <div>
+      <Navbar />
+      <Sidebar />
+
+    </div>
   );
 }
 

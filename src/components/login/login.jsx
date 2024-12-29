@@ -1,4 +1,5 @@
 import React from 'react';
+import googleLogo from '../../assets/google.png'
 import './Login.css';
 
 const Login = () => {
@@ -34,7 +35,7 @@ const Login = () => {
         </div>
 
         <button className="google-login-button">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Google_icon_%282020%29.svg" alt="Google icon" />
+          <img src={googleLogo} alt="Google icon" />
           Login with Google
         </button>
 
