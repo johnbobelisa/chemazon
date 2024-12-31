@@ -13,7 +13,7 @@ function App() {
     
     // Then redirect to Cognito’s logout endpoint
     const clientId = "3434jm9fro5mf2c78iat4jcgap";
-    const logoutUri = "http://localhost:5173/";
+    const logoutUri = "https://staging.d3rhbniov1vc9d.amplifyapp.com/";
     const cognitoDomain = "https://ap-southeast-2igxmruzaf.auth.ap-southeast-2.amazoncognito.com";
     window.location.href = `${cognitoDomain}/logout?client_id=${clientId}&logout_uri=${encodeURIComponent(logoutUri)}`;
   };
