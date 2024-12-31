@@ -1,4 +1,4 @@
-// index.js
+// main.jsx
 import { AuthProvider} from "react-oidc-context";
 import App from "./App";
 import ReactDOM from "react-dom/client";

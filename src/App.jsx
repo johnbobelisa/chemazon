@@ -1,7 +1,8 @@
 import React from "react";
 import { useAuth } from "react-oidc-context";
-import Navbar from "./components/Navbar/Navbar";
+import Navbar from "./components/navbar/navbar";
 import Sidebar from "./components/Sidebar/Sidebar";
+import "./App.css";
 
 function App() {
   const auth = useAuth();
@@ -34,9 +35,11 @@ function App() {
 
   // Pass signOut to Navbar
   return (
-    <div>
-      <Navbar signOut={signOut} />
-      <Sidebar />
+    <div> 
+      <body>
+        <Navbar signOut={signOut} />
+        <Sidebar />
+      </body>
     </div>
   );
 }
