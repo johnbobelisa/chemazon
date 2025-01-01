@@ -1,0 +1,75 @@
+/* PRODUCTS AND SIDEBAR */
+.products-and-sidebar {
+    display: flex; 
+    width: 100%;
+  }
+
+.sidebar-container {
+    position: fixed; /* Fix the sidebar relative to the viewport */
+    top: 63px; 
+    overflow-y: auto; /* Allow scrolling within the sidebar if content overflows */
+    z-index: 1000; /* Ensure it stays above other content */
+}
+
+.products-container {
+    margin-left: 250px; /* Create space to the right of the fixed sidebar */
+    padding: 16px; /* Optional: Add some padding around the content */
+}
+  
+  
+.products-container {
+    flex: 9; /* Allow the products to take up more space */
+}
+
+/* SIDEBAR */
+.sidebar-container .sidebar {
+    width: 220px;
+    background-color: #fff;
+    padding: 20px;
+    border-right: 1px solid #ddd;
+    height: 100vh;
+  }
+  
+  .sidebar-container .sidebar-section {
+    margin-bottom: 20px;
+  }
+  
+  .sidebar-container .sidebar-section h3 {
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .sidebar-container .sidebar-section ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .sidebar-container .sidebar-section li {
+    margin-bottom: 8px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .sidebar-container .sidebar-section label {
+    cursor: pointer;
+  }
+  
+  input[type="checkbox"],
+  input[type="radio"] {
+    margin-right: 5px;
+  }
+  
+  /* SIDEBAR */
+
+  /* PRODUCTS */
+  .products-container .product-listing-container {
+    flex: 1; /* fill remaining space beside sidebar */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    /* for a layout closer to Amazon, you might do something like 4 columns on large screens */
+    gap: 20px;
+    padding: 20px;
+    background-color: #ECDD7B;
+  }
+  
