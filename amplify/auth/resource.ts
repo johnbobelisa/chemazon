@@ -11,14 +11,13 @@ export const auth = defineAuth({
       },
       callbackUrls: [
         'http://localhost:5173/',
-        'https://88eeb65770286b34bb79.auth.ap-southeast-2.amazoncognito.com/oauth2/idpresponse',
-        'https://main.d2u5i2xewpxqw0.amplifyapp.com/',
+        'https://main.d2u5i2xewpxqw0.amplifyapp.com/'
       ],
       logoutUrls: [
         'http://localhost:5173/',
-        'https://88eeb65770286b34bb79.auth.ap-southeast-2.amazoncognito.com',
-        'https://main.d2u5i2xewpxqw0.amplifyapp.com/',
+        'https://main.d2u5i2xewpxqw0.amplifyapp.com/'
       ],
+      
       
     }
   }
